@@ -1,5 +1,6 @@
-import "./globals.css";  // ✅ Tailwind CSS import
+import "./globals.css";
 import React from "react";
+import { AuthProvider } from "@/context/AuthContext";
 
 export const metadata = {
   title: "AuthCall",
@@ -9,18 +10,16 @@ export const metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode;   // ✅ THIS FIXES THE ERROR
 }) {
   return (
     <html lang="en">
       <head>
-        {/* Paystack Inline Script */}
         <script src="https://js.paystack.co/v1/inline.js" />
       </head>
 
-      {/* Apply Tailwind styles to the entire app */}
       <body className="bg-gray-50 text-gray-900">
-        {children}
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );
