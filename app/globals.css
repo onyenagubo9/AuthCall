@@ -24,3 +24,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+:root{
+  --accent: #16a34a; /* green */
+  --accent-600: #15803d;
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+}
